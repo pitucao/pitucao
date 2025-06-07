@@ -1,0 +1,100 @@
+/* Estilos globais */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: url('https://zelda.nintendo.com/breath-of-the-wild/assets/media/wallpapers/desktop-1.jpg') no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header: área do logo */
+.top-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: transparent;
+}
+
+/* Imagem do logo responsiva */
+.top-logo img {
+    width: 30%;
+    height: auto;
+}
+
+/* Container principal centralizado com fundo preto semi-transparente */
+.big-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 5%;
+    max-width: 800px;
+    padding: 20px;
+    margin-right: 24cm;
+    margin-top: 5cm;
+}
+
+/* Estilo para cada postagem */
+.post {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 35px 0;
+}
+
+/* Imagens das postagens */
+.post img {
+  width: 20%; /* Se width é tratado com "%" e height com "auto" as imagens se tornam responsivas, aumentando e diminuindo */
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Área de texto da postagem */
+.text {
+    flex: 1;
+}
+
+.text p {
+    color: #0ff; /* Ciano neon */
+    margin: 0;
+}
+
+/* Título com cor amarela e itálico, com data/hora à direita */
+.text h2 {
+    color: yellow;
+    font-style: italic;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo para a data/hora */
+.datetime {
+    font-size: 0.8em;
+}
+
+/* Barra separadora com gradiente cyberpunk */
+.separator {
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, magenta, cyan, yellow);
+}
+
+/* Footer com fundo semi-transparente e texto em negrito */
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.6250em; /* 10px */
+    
+}
+
