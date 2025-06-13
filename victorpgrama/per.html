@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Meu Skate</title>
+</head>
+<body>
+    
+<h1>Personalização de Surf Skate</h1>
+
+<!-- Truck Dianteiro -->
+<div class="section" id="truck-dianteiro">
+    <h2>Truck Dianteiro</h2>
+    <label><input type="radio" name="truckDianteiro" value="De Mola"> De Mola - Resposta rápida para manobrabilidade extrema</label>
+    <label><input type="radio" name="truckDianteiro" value="Convencional de Surfskate"> Convencional de Surfskate - Proporciona estabilidade e controle</label>
+</div>
+
+<!-- Truck Traseiro -->
+<div class="section" id="truck-traseiro">
+    <h2>Truck Traseiro</h2>
+    <label><input type="radio" name="truckTraseiro" value="Apertado"> Apertado - Maior estabilidade em curvas</label>
+    <label><input type="radio" name="truckTraseiro" value="Solto"> Solto - Facilita movimentos livres</label>
+</div>
+
+<!-- Rodas -->
+<div class="section" id="rodas">
+    <h2>Rodas</h2>
+    <label><input type="radio" name="rodas" value="Diâmetro Menor"> Diâmetro Menor - Mais agilidade e controle</label>
+    <label><input type="radio" name="rodas" value="Diâmetro Maior"> Diâmetro Maior - Sustentação de velocidade</label>
+</div>
+
+<!-- Dureza das Rodas -->
+<div class="section" id="dureza-rodas">
+    <h2>Dureza das Rodas</h2>
+    <label><input type="radio" name="durezaRodas" value="Duras"> Duras (Acima de 90A) - Perfeitas para slides</label>
+    <label><input type="radio" name="durezaRodas" value="Macias"> Macias (Abaixo de 80A) - Absorvem impactos</label>
+</div>
+
+<!-- Rolamentos -->
+<div class="section" id="rolamentos">
+    <h2>Rolamentos</h2>
+    <label><input type="radio" name="rolamentos" value="Aço Inox"> Aço Inox - Duráveis e resistentes</label>
+    <label><input type="radio" name="rolamentos" value="Cerâmica"> Cerâmica - Leves e com menos atrito</label>
+</div>
+
+<!-- Shape (Deck) -->
+<div class="section" id="shape">
+    <h2>Shape (Deck)</h2>
+    <label><input type="radio" name="shape" value="Curvatura Alta"> Curvatura Alta - Dá controle adicional</label>
+    <label><input type="radio" name="shape" value="Estendido"> Estendido - Proporciona confiança e estabilidade</label>
+</div>
+
+<!-- Botão e Resultado -->
+<button onclick="mostrarEscolhas()">Confirmar Escolhas</button>
+<div class="output" id="resultado"></div>
+
+<script>
+    function mostrarEscolhas() {
+        const escolhaTruckDianteiro = document.querySelector('input[name="truckDianteiro"]:checked')?.value;
+        const escolhaTruckTraseiro = document.querySelector('input[name="truckTraseiro"]:checked')?.value;
+        const escolhaRodas = document.querySelector('input[name="rodas"]:checked')?.value;
+        const escolhaDurezaRodas = document.querySelector('input[name="durezaRodas"]:checked')?.value;
+        const escolhaRolamentos = document.querySelector('input[name="rolamentos"]:checked')?.value;
+        const escolhaShape = document.querySelector('input[name="shape"]:checked')?.value;
+
+        const resultado = `
+            <h3>Sua Personalização:</h3>
+            <p>Truck Dianteiro: ${escolhaTruckDianteiro || "Não escolhido"}</p>
+            <p>Truck Traseiro: ${escolhaTruckTraseiro || "Não escolhido"}</p>
+            <p>Rodas: ${escolhaRodas || "Não escolhido"}</p>
+            <p>Dureza das Rodas: ${escolhaDurezaRodas || "Não escolhido"}</p>
+            <p>Rolamentos: ${escolhaRolamentos || "Não escolhido"}</p>
+            <p>Shape (Deck): ${escolhaShape || "Não escolhido"}</p>
+        `;
+        document.getElementById('resultado').innerHTML = resultado;
+    }
+</script>
+<a href="index.html">Voltar</a>
+</body>
+</html>
